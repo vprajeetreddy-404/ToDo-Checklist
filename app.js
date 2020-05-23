@@ -14,7 +14,7 @@ app.use(express.static("public"));
 
 app.get("/", function(req, res) {
 
-  let today = new Date();
+  let today = new Date(); // If u want to add the date
 
   let options = {
     weekday: "long",
