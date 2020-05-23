@@ -38,6 +38,11 @@ app.post("/", function(req, res) {
 
 });
 
-app.listen(process.env.PORT, function() {
+app.post("/removetask", function(req, res) {
+  items.splice(0,items.length);
+  res.redirect("/");
+});
+
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port 3000.");
 });
